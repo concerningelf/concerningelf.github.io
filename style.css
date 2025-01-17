@@ -30,7 +30,7 @@
 
 body {
     font-family: var(--body-font);
-    background-color: var(--dark-gray); 
+    background-color: var(--dark-gray);
     color: var(--text-color);
     line-height: 1.6;
     display: flex;
@@ -63,8 +63,8 @@ header.scrolled {
 
 header .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack logo and nav */
+    align-items: flex-start; /* Align to the left */
     padding: 15px 20px;
 }
 
@@ -73,6 +73,7 @@ header .container {
     font-size: 1.8rem;
     color: var(--accent-color); /* Use the new accent color */
     text-decoration: none;
+    margin-bottom: 5px; /* Add some spacing below logo */
 }
 
 .hamburger-menu {
@@ -87,10 +88,18 @@ header .container {
     font-size: 1.8rem;
 }
 
+/* Modified styles for the navigation */
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 2rem;
+    display: flex; /* Display in a row */
+    gap: 1rem;
+    align-items: center;
+    margin-left: 0;
+    padding: 0;
+}
+
+.nav-links li a{
+    padding: 0;
 }
 
 .nav-links li a {
@@ -408,16 +417,29 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+   header .container {
+        flex-direction: column; /* Stack logo and nav */
+        align-items: flex-start; /* Align to the left */
+        padding: 15px 20px;
+    }
+
+    .logo {
+        margin-bottom: 5px;
+    }
     .nav-links {
-        position: absolute;
-        top: 70px; /* Adjust based on header height */
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: var(--nav-bg-color);
-        text-align: center;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
+        position: static;
+        flex-direction: row; /* Display nav links in a single line*/
+        background-color: transparent;
+        text-align: left;
+        transform: translateX(0);
+        padding: 0;
+        width: auto;
+        justify-content: flex-start;
+        gap: 1rem;
+        margin-left: 0;
+    }
+   .nav-links li a{
+        padding: 0;
     }
 
     .nav-links.open {
@@ -425,17 +447,23 @@ footer {
     }
 
     .nav-links li {
-        padding: 15px 0;
+        padding: 0;
+    }
+    .nav-links li a {
+        border-bottom: none;
+    }
+    .nav-links li a:hover {
+        border-bottom: none;
     }
 
     .hamburger-menu {
-        display: block;
+        display: none;
     }
 
-    .hero {
+     .hero {
         padding: 60px 20px;
     }
-
+    
     .hero h1 {
         font-size: 3rem;
     }
@@ -531,7 +559,7 @@ i, em {
 /* Project 1 Hero Section */
 .project-1-hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 60px 20px;
     background-color: var(--accent-color); /* Correct background color */
     position: relative;
     overflow: hidden;
@@ -539,11 +567,11 @@ i, em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: auto;
 }
 
 .project-1-hero h1 {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     font-family: var(--heading-font); /* Correct font */
     font-weight: 700;
     color: var(--dark-gray); /* Text color for contrast */
@@ -552,7 +580,7 @@ i, em {
 }
 
 .project-1-hero .subheading {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: var(--dark-gray); /* Text color for contrast */
     z-index: 2;
 }
@@ -571,7 +599,7 @@ i, em {
 
 /* Project 1 Content */
 .project-1-content {
-    padding: 60px;
+    padding: 20px;
 }
 
 .project-1-content .project-1-text {
