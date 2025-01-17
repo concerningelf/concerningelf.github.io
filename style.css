@@ -6,6 +6,7 @@
 }
 
 :root {
+    /* ... (your root variables) ... */
     --primary-color: #3840FB; /* New Primary Blue */
     --accent-color: #f98a8b; /* New Accent Color */
     --highlight-color: #ffb6c1; /* Light Coral (kept for consistency in some areas) */
@@ -29,7 +30,7 @@
 
 body {
     font-family: var(--body-font);
-    background-color: var(--dark-gray); /* Start with dark gray */
+    background-color: var(--dark-gray); 
     color: var(--text-color);
     line-height: 1.6;
     display: flex;
@@ -497,6 +498,18 @@ footer {
         }
     }
 }
+
+/* Specific styles for b, strong, i, and em tags */
+b, strong {
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700; /* Bold weight for Recursive */
+}
+
+i, em {
+    font-family: 'Recursive', sans-serif;
+    font-style: italic;
+}
+
 .timeline li {
     padding-left: 30px;
     border-left: 3px solid;
@@ -514,4 +527,102 @@ footer {
     height: 15px;
     background-color: var(--accent-color);
     border-radius: 0; /* Sharp corners */
+}
+/* Project 1 Hero Section */
+.project-1-hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--accent-color); /* Correct background color */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.project-1-hero h1 {
+    font-size: 4.5rem;
+    font-family: var(--heading-font); /* Correct font */
+    font-weight: 700;
+    color: var(--dark-gray); /* Text color for contrast */
+    margin-bottom: 15px;
+    z-index: 2;
+}
+
+.project-1-hero .subheading {
+    font-size: 1.6rem;
+    color: var(--dark-gray); /* Text color for contrast */
+    z-index: 2;
+}
+
+/* Project 1 Wavy Separator */
+.project-1-hero .wavy-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust height as needed */
+    background-color: var(--wavy-separator-color); /* Corrected color */
+    clip-path: ellipse(65% 30px at 50% 100%);
+    z-index: 1;
+}
+
+/* Project 1 Content */
+.project-1-content {
+    padding: 60px;
+}
+
+.project-1-content .project-1-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.project-1-content .project-1-text b {
+    color: var(--accent-color);
+}
+
+/* Project 1 Images */
+.project-1-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* First Image Container */
+.project-1-images .image-container.first-image {
+    max-height: none; /* Remove max-height restriction */
+}
+
+/* Three Images Side-by-Side */
+.project-1-images.three-images-set {
+    flex-direction: row; /* Align images horizontally */
+    justify-content: center;
+}
+
+/* Full-Width Image */
+.project-1-images.full-width-image {
+    grid-column: 1 / -1; /* Span across all columns */
+}
+
+.project-1-images .image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.project-1-images.three-images-set .image-container{
+    width: 33.33%;
+}
+.project-1-images .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Fit image without cropping */
+}
+.project-1-images.full-width-image .image-container img{
+    object-fit: cover;
 }
