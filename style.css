@@ -178,7 +178,7 @@ header .container {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 400px;  /* Set a fixed height */
+      height: auto; /* Set to auto by default */
 }
 
 .project-card:hover {
@@ -188,8 +188,9 @@ header .container {
 .project-card img {
     width: 100%;
     display: block;
-    object-fit: cover;   /* Changed to cover for filling the space */
-     height: 100%;    /*Set height to 100% to fill the box, use cover*/
+    object-fit: cover;
+    height: 100%;
+
 }
 
 .project-card .project-details {
