@@ -63,24 +63,25 @@ header.scrolled {
 
 header .container {
     display: flex;
-    flex-direction: column; /* Stack logo and nav */
-    align-items: flex-start; /* Align to the left */
+    /* flex-direction: column; */
+    align-items: center; /* Vertically align logo and nav */
     padding: 15px 20px;
+    justify-content: space-between;
 }
 
 .logo {
     font-family: var(--heading-font);
     font-size: 1.8rem;
-    color: var(--accent-color); /* Use the new accent color */
+    color: var(--accent-color);
     text-decoration: none;
-    margin-bottom: 5px; /* Add some spacing below logo */
+    /* margin-bottom: 5px; */
 }
 
 .hamburger-menu {
     background: none;
     border: none;
     cursor: pointer;
-    display: none; /* Hide by default on larger screens */
+    display: none;
 }
 
 .hamburger-menu i {
@@ -91,13 +92,12 @@ header .container {
 /* Modified styles for the navigation */
 .nav-links {
     list-style: none;
-    display: flex; /* Display in a row */
+    display: flex;
     gap: 1rem;
     align-items: center;
-    margin-left: 0;
+    margin-left: auto;
     padding: 0;
 }
-
 .nav-links li a{
     padding: 0;
 }
@@ -120,31 +120,31 @@ header .container {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 100px 20px; /* Increased padding */
-    background-image: url('your-grainy-blue-bg.jpg'); /* Replace with your image */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
+    padding: 100px 20px;
+    background-image: url('your-grainy-blue-bg.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
     overflow: hidden;
 }
 
 .hero h1 {
-    font-size: 4.5rem; /* Increased font size */
+    font-size: 4.5rem;
     font-family: var(--heading-font);
     font-weight: 700;
-    color: var(--hero-heading-color); /* White for headings */
-    margin-bottom: 15px; /* Increased margin */
+    color: var(--hero-heading-color);
+    margin-bottom: 15px;
 }
 
 .hero .subheading {
-    font-size: 1.6rem; /* Increased font size */
-    color: var(--hero-subheading-color); /* Light blue for subheading */
+    font-size: 1.6rem;
+    color: var(--hero-subheading-color);
 }
 
 /* Wavy Separator */
 .wavy-separator {
     width: 100%;
-    height: 50px; /* Adjust height as needed */
+    height: 50px;
     background-color: var(--wavy-separator-color);
     clip-path: ellipse(65% 30px at 50% 0%);
 }
@@ -152,7 +152,7 @@ header .container {
 /* Projects Section */
 .projects {
     padding: 60px 0;
-    background-color: var(--dark-gray); /* Dark gray background */
+    background-color: var(--dark-gray);
 }
 
 .projects h2 {
@@ -165,23 +165,23 @@ header .container {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased minmax value */
-    gap: 40px; /* Increased gap */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
 }
 
 .project-card {
     background-color: var(--card-bg-dark-section);
-    border-radius: 0; /* Sharp corners */
+    border-radius: 0;
     overflow: hidden;
     box-shadow: 0 5px 15px var(--shadow-color);
-    transition: transform 0.2s ease; /* Faster transform */
+    transition: transform 0.2s ease;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
 .project-card:hover {
-    transform: scale(1.03); /* Scale up on hover */
+    transform: scale(1.03);
 }
 
 .project-card img {
@@ -191,13 +191,13 @@ header .container {
 }
 
 .project-card .project-details {
-    padding: 25px; /* Increased padding */
+    padding: 25px;
     text-align: center;
 }
 
 .project-card h3 {
     font-family: var(--heading-font);
-    font-size: 1.8rem; /* Increased font size */
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--accent-color);
     margin-top: auto;
@@ -206,16 +206,16 @@ header .container {
 /* About Section */
 .about {
     padding: 60px 0;
-    background-color: var(--dark-gray); /* Dark gray background */
+    background-color: var(--dark-gray);
     display: flex;
     gap: 40px;
 }
 
 .profile {
-    flex: 0 0 30%; /* Adjust width as needed */
+    flex: 0 0 30%;
     background-color: var(--card-bg-dark-section);
     padding: 30px;
-    border-radius: 0; /* Sharp corners */
+    border-radius: 0;
     box-shadow: 0 5px 15px var(--shadow-color);
 }
 
@@ -281,13 +281,13 @@ header .container {
     width: 15px;
     height: 15px;
     background-color: var(--accent-color);
-    border-radius: 0; /* Sharp corners */
+    border-radius: 0;
 }
 
 .timeline .content {
     background-color: var(--card-bg-dark-section);
     padding: 20px;
-    border-radius: 0; /* Sharp corners */
+    border-radius: 0;
     box-shadow: 0 5px 15px var(--shadow-color);
 }
 
@@ -319,14 +319,14 @@ header .container {
 
 .contact-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased minmax for better spacing */
-    gap: 40px; /* Increased gap for better spacing */
-    justify-content: center; /* Center the grid */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    justify-content: center;
 }
 
 .contact-method {
     background-color: var(--card-bg-dark-section);
-    padding: 25px; /* Increased padding */
+    padding: 25px;
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -343,14 +343,14 @@ header .container {
 .contact-method i {
     font-size: 1.5rem;
     color: var(--accent-color);
-    flex-shrink: 0; /* Prevent icon from shrinking */
+    flex-shrink: 0;
 }
 
 .contact-method a,
 .contact-method p {
     color: var(--accent-color);
     text-decoration: none;
-    font-size: 1.1rem; /* Increased font size */
+    font-size: 1.1rem;
 }
 
 .contact-method a:hover {
@@ -360,7 +360,7 @@ header .container {
 /* Writings Section */
 .writings {
     padding: 60px 0;
-    background-color: var(--dark-gray); /* Dark gray background */
+    background-color: var(--dark-gray);
 }
 
 .writings h2 {
@@ -379,7 +379,7 @@ header .container {
 
 .writing-card {
     background-color: var(--card-bg-dark-section);
-    border-radius: 0; /* Sharp corners */
+    border-radius: 0;
     padding: 30px;
     box-shadow: 0 5px 15px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -407,7 +407,7 @@ header .container {
 
 /* Footer */
 footer {
-    background-color: var(--dark-gray); /* Dark gray background */
+    background-color: var(--dark-gray);
     color: var(--text-color);
     text-align: center;
     padding: 30px 0;
@@ -417,10 +417,9 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-   header .container {
-        flex-direction: column; /* Stack logo and nav */
-        align-items: flex-start; /* Align to the left */
-        padding: 15px 20px;
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .logo {
@@ -428,7 +427,7 @@ footer {
     }
     .nav-links {
         position: static;
-        flex-direction: row; /* Display nav links in a single line*/
+        flex-direction: row;
         background-color: transparent;
         text-align: left;
         transform: translateX(0);
@@ -438,7 +437,7 @@ footer {
         gap: 1rem;
         margin-left: 0;
     }
-   .nav-links li a{
+    .nav-links li a{
         padding: 0;
     }
 
@@ -560,7 +559,7 @@ i, em {
 .project-1-hero {
     text-align: center;
     padding: 60px 20px;
-    background-color: var(--accent-color); /* Correct background color */
+    background-color: var(--accent-color);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -572,16 +571,16 @@ i, em {
 
 .project-1-hero h1 {
     font-size: 2.5rem;
-    font-family: var(--heading-font); /* Correct font */
+    font-family: var(--heading-font);
     font-weight: 700;
-    color: var(--dark-gray); /* Text color for contrast */
+    color: var(--dark-gray);
     margin-bottom: 15px;
     z-index: 2;
 }
 
 .project-1-hero .subheading {
     font-size: 1.2rem;
-    color: var(--dark-gray); /* Text color for contrast */
+    color: var(--dark-gray);
     z-index: 2;
 }
 
@@ -591,8 +590,8 @@ i, em {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Adjust height as needed */
-    background-color: var(--wavy-separator-color); /* Corrected color */
+    height: 50px;
+    background-color: var(--wavy-separator-color);
     clip-path: ellipse(65% 30px at 50% 100%);
     z-index: 1;
 }
@@ -614,7 +613,7 @@ i, em {
 /* Project 1 Images */
 .project-1-images {
     display: flex;
-    flex-direction: column; /* Stack images vertically */
+    flex-direction: column;
     width: 100%;
     align-items: center;
     gap: 40px;
@@ -623,18 +622,18 @@ i, em {
 
 /* First Image Container */
 .project-1-images .image-container.first-image {
-    max-height: none; /* Remove max-height restriction */
+    max-height: none;
 }
 
 /* Three Images Side-by-Side */
 .project-1-images.three-images-set {
-    flex-direction: row; /* Align images horizontally */
+    flex-direction: row;
     justify-content: center;
 }
 
 /* Full-Width Image */
 .project-1-images.full-width-image {
-    grid-column: 1 / -1; /* Span across all columns */
+    grid-column: 1 / -1;
 }
 
 .project-1-images .image-container {
@@ -649,8 +648,24 @@ i, em {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain; /* Fit image without cropping */
+    object-fit: contain;
 }
 .project-1-images.full-width-image .image-container img{
     object-fit: cover;
+}
+/* Media query for larger screens */
+@media (min-width: 769px) {
+    .project-1-hero {
+        padding: 100px 20px;
+         height: 400px;
+    }
+   .project-1-hero h1 {
+        font-size: 4.5rem;
+    }
+     .project-1-hero .subheading {
+        font-size: 1.6rem;
+    }
+    .project-1-content {
+      padding: 60px;
+    }
 }
